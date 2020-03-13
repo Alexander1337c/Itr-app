@@ -1,5 +1,5 @@
 {
-    "port": 443,
+    "port": 3000,
     "mongoUri": "mongodb+srv://Alexander:sanj408960@cluster0-0vv8d.azure.mongodb.net/app?retryWrites=true&w=majority",
     "jwtSecret": "alex mern",
     "baseUrl": "https://dry-headland-43985.herokuapp.com/"

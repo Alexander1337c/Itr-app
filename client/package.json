@@ -23,7 +23,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  
+  "proxy": "https://dry-headland-43985.herokuapp.com/",
   "secure": false,
   "browserslist": {
     "production": [
