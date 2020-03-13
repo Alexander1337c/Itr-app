@@ -23,7 +23,7 @@ export const NoteList = ({ notes }) => {
     };
 
     const deleteNote= (id) => {
-        axios.delete('http://localhost:3000/api/notes/'+id)
+        axios.delete('https://dry-headland-43985.herokuapp.com/api/notes/'+id)
       .then(response => { console.log(response.data)});
       window.location.reload()
     }

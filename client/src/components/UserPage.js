@@ -17,7 +17,7 @@ export default class UserPage extends Component {
         this.state = { users: [], checkedId: [] };
     }
 
-
+    
     clicked = (event) => {
         if (event.target.checked) {
             var checkboxes = document.getElementsByName("rowSelectCheckBox");
@@ -52,7 +52,7 @@ export default class UserPage extends Component {
         console.log(this.checkedId)
     }
     componentDidMount() {
-        axios.get('http://localhost:3000/api/users')
+        axios.get('https://dry-headland-43985.herokuapp.com/api/users')
             .then(response => {
                 this.setState({ users: response.data })
             })
@@ -67,7 +67,7 @@ export default class UserPage extends Component {
 
             try {
 
-                axios.delete('http://localhost:3000/api/users/' + this.checkedId[i])
+                axios.delete('https://dry-headland-43985.herokuapp.com/api/users/' + this.checkedId[i])
 
                     .then(response => { console.log(response.data) });
                 if (JSON.parse(localStorage.getItem('userData')).userId === this.checkedId[i]) {
@@ -94,7 +94,7 @@ export default class UserPage extends Component {
 
             try {
 
-                axios.put('http://localhost:3000/api/users/update-block/' + this.checkedId[i])
+                axios.put('https://dry-headland-43985.herokuapp.com/api/users/update-block/' + this.checkedId[i])
 
                     .then(response => { console.log(response.data) });
                 if (JSON.parse(localStorage.getItem('userData')).userId === this.checkedId[i]) {
@@ -115,7 +115,7 @@ export default class UserPage extends Component {
 
             try {
 
-                axios.put('http://localhost:3000/api/users/update-unblock/' + this.checkedId[i])
+                axios.put('https://dry-headland-43985.herokuapp.com/api/users/update-unblock/' + this.checkedId[i])
 
                     .then(response => { console.log(response.data) });
                 if (JSON.parse(localStorage.getItem('userData')).userId === this.checkedId[i]) {
