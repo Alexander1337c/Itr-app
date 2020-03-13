@@ -1,5 +1,4 @@
 import React from 'react';
-import cx from 'classnames';
 
 import './ColorPicker.css';
 
@@ -13,7 +12,7 @@ class ColorPicker extends React.Component {
                     COLORS.map(color =>
                         <div
                             key={color}
-                            className={cx('ColorPicker__swatch', { selected: this.props.value === color })}
+                            className={('ColorPicker__swatch', { selected: this.props.value === color })}
                             style={{ backgroundColor: color }}
                             onClick={this.props.onChange.bind(null, color)}
                         />
